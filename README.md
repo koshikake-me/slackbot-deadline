@@ -9,7 +9,7 @@
 
 ### スプレッドシートで用意したテキストにガッと情報を入力してボンッて出力する
 
-https://github.com/koshikake-me/slackbot-deadline/assets/99068190/af443d0f-a271-480a-9065-1eaf9e1b35c7)
+https://github.com/koshikake-me/slackbot-deadline/assets/99068190/af443d0f-a271-480a-9065-1eaf9e1b35c7
 
 - こういうの
 
