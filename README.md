@@ -9,9 +9,11 @@
 
 ### スプレッドシートで用意したテキストにガッと情報を入力してボンッて出力する
 
-https://github.com/koshikake-me/slackbot-deadline/assets/99068190/af443d0f-a271-480a-9065-1eaf9e1b35c7)
+![gazou-da-zou](https://github.com/koshikake-me/slackbot-deadline/assets/99068190/af443d0f-a271-480a-9065-1eaf9e1b35c7)
+- これが
 
-- こういうの
+![yeah-da-zou](https://github.com/koshikake-me/slackbot-deadline/assets/99068190/81c6a8b4-7963-4e7a-8d73-dcaf1a13f781)
+- こうなる
 
 ## ざっくりとした仕様
 
@@ -32,3 +34,5 @@ https://github.com/koshikake-me/slackbot-deadline/assets/99068190/af443d0f-a271-
 
 - ほぼ月毎に発刊される大学の資料があり、その資料を確認しないと確定した予定の情報が得られない。これを都度入力する必要があった...
 - これを将来的にやっていく場合、プログラマーが不在だと困ると思ったのでスプレッドシートを書くだけで良い設計にする必要があった
+
+![e-yeah-da-zou](https://github.com/koshikake-me/slackbot-deadline/assets/99068190/b1870c65-1c5a-471f-b8a7-e4b9b14e2cc9)
