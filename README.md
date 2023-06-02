@@ -10,8 +10,9 @@
 ### スプレッドシートで用意したテキストにガッと情報を入力してボンッて出力する
 
 ![gazou-da-zou](https://github.com/koshikake-me/slackbot-deadline/assets/99068190/af443d0f-a271-480a-9065-1eaf9e1b35c7)
-
-- こういうの
+- これが
+![yeah-da-zou](https://github.com/koshikake-me/slackbot-deadline/assets/99068190/81c6a8b4-7963-4e7a-8d73-dcaf1a13f781)
+- こうなる
 
 ## ざっくりとした仕様
 
