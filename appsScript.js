@@ -115,6 +115,8 @@ const perDayFunction = function() {
     scheduleObj.scheduleList.forEach(schedule => {
       const starting = new Date(schedule.starting);
       const end = new Date(schedule.end);
+      const expensesStarting = new Date(schedule.expensesStarting);
+      const expensesEnd = new Date(schedule.expensesEnd);
       // 例外：【単修試験の試験日】は開始日2日前のみ
       if(sheetName === CategoryType.takeTanshu) {
         if(
@@ -127,20 +129,20 @@ const perDayFunction = function() {
       }else {
         // 予定の開始日・予定の終了日の前日・予定の終了日
         if(
-          (starting.getTime()-today.getTime() < 0)
-          && (-(DateType.ONE_DAY) < starting.getTime()-today.getTime())
+          ((starting.getTime()-today.getTime() < 0) && (-(DateType.ONE_DAY) < starting.getTime()-today.getTime()))
+          || ((expensesStarting.getTime()-today.getTime() < 0) && (-(DateType.ONE_DAY) < expensesStarting.getTime()-today.getTime()))
         ) {
           const message = getUtilSheetEdited(sheetName, schedule, NoticeType.startDay);
           postChat(SLACK_TOKEN, TARGET_CHANNEL_ID, message);
         }else if(
-          (end.getTime()-(today.getTime()+DateType.ONE_DAY) < 0)
-          && (-(DateType.ONE_DAY) < end.getTime()-(today.getTime()+DateType.ONE_DAY))
+          ((end.getTime()-(today.getTime()+DateType.ONE_DAY) < 0) && (-(DateType.ONE_DAY) < end.getTime()-(today.getTime()+DateType.ONE_DAY)))
+          || ((expensesEnd.getTime()-(today.getTime()+DateType.ONE_DAY) < 0) && (-(DateType.ONE_DAY) < expensesEnd.getTime()-(today.getTime()+DateType.ONE_DAY)))
         ) {
           const message = getUtilSheetEdited(sheetName, schedule, NoticeType.endBeforeOneDay);
           postChat(SLACK_TOKEN, TARGET_CHANNEL_ID, message);
         }else if(
-          (end.getTime()-today.getTime() < 0)
-          && (-(DateType.ONE_DAY) < end.getTime()-today.getTime())
+          ((end.getTime()-today.getTime() < 0) && (-(DateType.ONE_DAY) < end.getTime()-today.getTime()))
+          || (((expensesEnd.getTime()-today.getTime() < 0) && (-(DateType.ONE_DAY) < expensesEnd.getTime()-today.getTime())))
         ) {
           const message = getUtilSheetEdited(sheetName, schedule, NoticeType.endDay);
           postChat(SLACK_TOKEN, TARGET_CHANNEL_ID, message);
